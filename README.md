@@ -40,3 +40,14 @@
 ## 9.检测网络行为：
 
 沙箱环境通常会限制应用程序的网络访问权限，因此可以通过监视应用程序的网络行为来检测沙箱。例如，可以检查应用程序的DNS查询、网络流量和代理设置等。
+
+
+# mingw编译
+
+```bat
+x86_64-w64-mingw32-g++ stub.cpp -s -w -lpsapi -Wl,--subsystem,console -static   //控制台
+x86_64-w64-mingw32-g++ stub.cpp -s -w -lpsapi -Wl,--subsystem,windows -static   //应用程序
+```
+
+
+
